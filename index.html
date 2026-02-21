@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מכונת הקסמים</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&display=swap');
+        body {
+            font-family: 'Assistant', sans-serif;
+        }
+        .step {
+            display: none;
+        }
+        .step.active {
+            display: block;
+        }
+        .bounce-animation {
+            animation: bounce 0.5s;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-30px);
+            }
+            60% {
+                transform: translateY(-15px);
+            }
+        }
+    </style>
+</head>
+<body class="bg-blue-100 flex items-center justify-center min-h-screen">
+
+    <div id="app" class="w-full max-w-2xl mx-auto p-4">
+
+        <h1 class="text-4xl font-bold text-center text-blue-600 mb-8">מכונת הקסמים</h1>
+
+        <!-- Step 1: Hero -->
+        <div id="step1" class="step active text-center">
+            <h2 class="text-3xl mb-6 text-gray-700">מי הגיבור?</h2>
+            <div class="grid grid-cols-2 gap-4">
+                <button data-choice="1" data-value="lion" class="choice-btn bg-yellow-200 text-yellow-800 p-6 rounded-3xl text-5xl transform hover:scale-105 transition-transform">🦁<span class="block text-2xl mt-2">אריה</span></button>
+                <button data-choice="1" data-value="robot" class="choice-btn bg-gray-300 text-gray-800 p-6 rounded-3xl text-5xl transform hover:scale-105 transition-transform">🤖<span class="block text-2xl mt-2">רובוט</span></button>
+                <button data-choice="1" data-value="unicorn" class="choice-btn bg-pink-200 text-pink-800 p-6 rounded-3xl text-5xl transform hover:scale-105 transition-transform">🦄<span class="block text-2xl mt-2">חד-קרן</span></button>
+                <button data-choice="1" data-value="dinosaur" class="choice-btn bg-green-200 text-green-800 p-6 rounded-3xl text-5xl transform hover:scale-105 transition-transform">🦖<span class="block text-2xl mt-2">דינוזאור</span></button>
+            </div>
+        </div>
+
+        <!-- Step 2: Action -->
+        <div id="step2" class="step text-center">
+            <h2 class="text-3xl mb-6 text-gray-700">מה הוא עושה?</h2>
+            <div class="grid grid-cols-2 gap-4">
+                <button data-choice="2" data-value="dancing" class="choice-btn bg-purple-200 text-purple-800 p-6 rounded-3xl text-5xl transform hover:scale-105 transition-transform">💃<span class="block text-2xl mt-2">רוקד במסיבה</span></button>
+                <button data-choice="2" data-value="eating ice cream" class="choice-btn bg-blue-200 text-blue-800 p-6 rounded-3xl text-5xl transform hover:scale-105 transition-transform">🍦<span class="block text-2xl mt-2">אוכל גלידה</span></button>
+                <button data-choice="2" data-value="skateboarding" class="choice-btn bg-red-200 text-red-800 p-6 rounded-3xl text-5xl transform hover:scale-105 transition-transform">🛹<span class="block text-2xl mt-2">רוכב על סקייטבורד</span></button>
+                <button data-choice="2" data-value="sleeping on a cloud" class="choice-btn bg-indigo-200 text-indigo-800 p-6 rounded-3xl text-5xl transform hover:scale-105 transition-transform">☁️<span class="block text-2xl mt-2">ישן על ענן</span></button>
+            </div>
+        </div>
+
+        <!-- Step 3: Location -->
+        <div id="step3" class="step text-center">
+            <h2 class="text-3xl mb-6 text-gray-700">איפה הוא נמצא?</h2>
+            <div class="grid grid-cols-2 gap-4">
+                <button data-choice="3" data-value="in a candy jungle" class="choice-btn bg-pink-300 text-pink-900 p-6 rounded-3xl text-5xl transform hover:scale-105 transition-transform">🍭<span class="block text-2xl mt-2">בג'ונגל ממתקים</span></button>
+                <button data-choice="3" data-value="on the moon" class="choice-btn bg-gray-400 text-gray-900 p-6 rounded-3xl text-5xl transform hover:scale-105 transition-transform">🌙<span class="block text-2xl mt-2">על הירח</span></button>
+                <button data-choice="3" data-value="under the sea" class="choice-btn bg-teal-200 text-teal-800 p-6 rounded-3xl text-5xl transform hover:scale-105 transition-transform">🐠<span class="block text-2xl mt-2">מתחת לים</span></button>
+                <button data-choice="3" data-value="in our kindergarten" class="choice-btn bg-green-300 text-green-900 p-6 rounded-3xl text-5xl transform hover:scale-105 transition-transform">🌳<span class="block text-2xl mt-2">בגן שלנו</span></button>
+            </div>
+        </div>
+
+        <!-- Step 4: Music Style -->
+        <div id="step4" class="step text-center">
+            <h2 class="text-3xl mb-6 text-gray-700">סגנון המוזיקה</h2>
+            <div class="grid grid-cols-2 gap-4">
+                <button data-choice="4" data-value="שמח וקצבי" class="choice-btn bg-yellow-300 text-yellow-900 p-6 rounded-3xl text-5xl transform hover:scale-105 transition-transform">🎈<span class="block text-2xl mt-2">שמח וקצבי</span></button>
+                <button data-choice="4" data-value="רגוע ומתוק" class="choice-btn bg-red-300 text-red-900 p-6 rounded-3xl text-5xl transform hover:scale-105 transition-transform">🍭<span class="block text-2xl mt-2">רגוע ומתוק</span></button>
+                <button data-choice="4" data-value="רוקנרול חזק" class="choice-btn bg-gray-500 text-white p-6 rounded-3xl text-5xl transform hover:scale-105 transition-transform">🎸<span class="block text-2xl mt-2">רוקנרול חזק</span></button>
+                <button data-choice="4" data-value="קרקס מצחיק" class="choice-btn bg-orange-300 text-orange-900 p-6 rounded-3xl text-5xl transform hover:scale-105 transition-transform">🎪<span class="block text-2xl mt-2">קרקס מצחיק</span></button>
+            </div>
+        </div>
+
+        <!-- Results -->
+        <div id="results" class="step">
+            <h2 class="text-3xl text-center mb-6 text-gray-700">הנה הקסם שלכם!</h2>
+            <div class="space-y-6">
+                <!-- Image Prompt -->
+                <div class="bg-white p-4 rounded-3xl shadow-lg">
+                    <h3 class="text-xl font-bold mb-2 text-blue-600">הנחיה לתמונה (נאנו בננה)</h3>
+                    <div dir="ltr" class="bg-gray-100 p-3 rounded-xl text-lg text-left relative">
+                        <p id="image-prompt"></p>
+                        <button onclick="copyToClipboard('image-prompt')" class="absolute top-2 right-2 bg-blue-500 text-white px-3 py-1 rounded-lg hover:bg-blue-600">Copy</button>
+                    </div>
+                </div>
+
+                <!-- Music Prompt -->
+                <div class="bg-white p-4 rounded-3xl shadow-lg">
+                    <h3 class="text-xl font-bold mb-2 text-purple-600">הנחיה לשיר ומוזיקה</h3>
+                    <div class="bg-gray-100 p-3 rounded-xl text-lg relative">
+                        <p id="music-prompt"></p>
+                        <button onclick="copyToClipboard('music-prompt')" class="absolute top-2 left-2 bg-purple-500 text-white px-3 py-1 rounded-lg hover:bg-purple-600">העתק</button>
+                    </div>
+                </div>
+            </div>
+            <button id="restart-btn" class="mt-8 w-full bg-green-500 text-white p-4 rounded-3xl text-2xl hover:bg-green-600">התחלה חדשה</button>
+        </div>
+    </div>
+
+    <script>
+        const steps = document.querySelectorAll('.step');
+        const choiceBtns = document.querySelectorAll('.choice-btn');
+        const restartBtn = document.getElementById('restart-btn');
+
+        let currentStep = 1;
+        const choices = {
+            1: { he: '', en: '' },
+            2: { he: '', en: '' },
+            3: { he: '', en: '' },
+            4: { he: '', en: '' }
+        };
+
+        const hebrewMap = {
+            'lion': 'אריה',
+            'robot': 'רובוט',
+            'unicorn': 'חד-קרן',
+            'dinosaur': 'דינוזאור',
+            'dancing': 'רוקד במסיבה',
+            'eating ice cream': 'אוכל גלידה',
+            'skateboarding': 'רוכב על סקייטבורד',
+            'sleeping on a cloud': 'ישן על ענן',
+            'in a candy jungle': 'בג\'ונגל ממתקים',
+            'on the moon': 'על הירח',
+            'under the sea': 'מתחת לים',
+            'in our kindergarten': 'בגן שלנו',
+        };
+
+        function showStep(stepId) {
+            steps.forEach(step => step.classList.remove('active'));
+            const nextStep = document.getElementById(stepId);
+            if (nextStep) {
+                nextStep.classList.add('active');
+                nextStep.classList.add('bounce-animation');
+                setTimeout(() => nextStep.classList.remove('bounce-animation'), 500);
+            }
+        }
+
+        choiceBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const step = parseInt(btn.dataset.choice);
+                const valueEn = btn.dataset.value;
+                
+                choices[step].en = valueEn;
+                // For steps 1-3, find the Hebrew equivalent from the map or the button's text
+                if (step < 4) {
+                    choices[step].he = hebrewMap[valueEn];
+                } else {
+                    // Step 4's value is already in Hebrew
+                    choices[step].he = valueEn;
+                }
+
+                currentStep++;
+                if (currentStep > 4) {
+                    showResults();
+                } else {
+                    showStep(`step${currentStep}`);
+                }
+            });
+        });
+
+        function showResults() {
+            // Generate English prompt for image
+            const imagePrompt = `A cute ${choices[1].en} ${choices[2].en} ${choices[3].en}, 3D render style, bright colors, high detail.`;
+            document.getElementById('image-prompt').innerText = imagePrompt;
+
+            // Generate Hebrew prompt for music
+            const musicPrompt = `כתוב שיר ילדים קצר ומולחן על ${choices[1].he} ש${choices[2].he} ${choices[3].he}. הסגנון המוזיקלי הוא ${choices[4].he}. השיר צריך להיות בעברית, קליט ומצחיק.`;
+            document.getElementById('music-prompt').innerText = musicPrompt;
+
+            showStep('results');
+        }
+
+        restartBtn.addEventListener('click', () => {
+            currentStep = 1;
+            Object.keys(choices).forEach(key => {
+                choices[key] = { he: '', en: '' };
+            });
+            showStep('step1');
+        });
+
+        function copyToClipboard(elementId) {
+            const textToCopy = document.getElementById(elementId).innerText;
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                alert('הטקסט הועתק!');
+            }).catch(err => {
+                console.error('Failed to copy text: ', err);
+            });
+        }
+    </script>
+
+</body>
+</html>
