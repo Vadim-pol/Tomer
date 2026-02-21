@@ -6,7 +6,7 @@
 אפליקציית אינטרנט אינטראקטיבית וצבעונית שנוצרה במיוחד עבור ילדים בגילאי 4-5, כדי להנגיש להם את עולם הבינה המלאכותית בצורה חווייתית ומהנה.
 
 ## 🚀 קישור לאפליקציה (Live Demo)
-[לחץ כאן לצפייה באפליקציה ב-GitHub Pages](https://vadim-pol.github.io/Tomer/)
+[לחץ כאן לצפייה באפליקציה ב-GitHub Pages]   (https://vadim-pol.github.io/Tomer/)
 
 ---
 
