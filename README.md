@@ -1,4 +1,4 @@
-# 🎨 מכונת הקסמים של [השם שלך/הכינוי שלך] - AI לשירות ילדי הגן
+# 🎨 מכונת הקסמים של תומר - AI לשירות ילדי הגן
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
 ![Status](https://img.shields.io/badge/Status-Live-green.svg)
